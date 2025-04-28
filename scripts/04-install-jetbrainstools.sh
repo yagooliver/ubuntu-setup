@@ -1,6 +1,6 @@
 # === Install JetBrains Toolbox ===
 if [ ! -d "/opt/jetbrains-toolbox" ]; then
-    echo "🔵 Installing JetBrains Toolbox..."
+    echo "Installing JetBrains Toolbox..."
     TOOLBOX_URL=$(curl -s "https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release" | jq -r '.TBA[0].downloads.linux.link')
     mkdir -p /opt/jetbrains-toolbox
     curl -L "$TOOLBOX_URL" -o /tmp/jetbrains-toolbox.tar.gz

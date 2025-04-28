@@ -1,21 +1,21 @@
 # =====================================
-# 🚀 Ubuntu Full Developer Setup - Makefile
+# Ubuntu Full Developer Setup - Makefile
 # =====================================
 
 # Variables
-SCRIPTS_DIR := ./scripts/
+SCRIPTS_DIR := ./scripts
 
 # Default target
 all: install
 
 # Install everything
 install:
-	@echo "🚀 Running Full System Setup..."
-	@bash $(SCRIPTS_DIR)/orchestrator.sh
+	@echo "Running Full System Setup..."
+	@bash ./orchestrator.sh
 
 # Update System only
 update:
-	@echo "🔄 Updating system packages..."
+	@echo "Updating system packages..."
 	@sudo apt update && sudo apt upgrade -y
 
 # Essentials manually (optional if you split essentials install)
@@ -25,45 +25,45 @@ essentials:
 
 # Install only individual components
 zsh:
-	@echo "💻 Installing Zsh + Oh-My-Zsh..."
-	@bash $(SCRIPTS_DIR)/01-install-zsh.sh
+	@echo "Installing Zsh + Oh-My-Zsh..."
+	@bash $(SCRIPTS_DIR)/10-install-zsh.sh
 
 nodejs:
-	@echo "🟠 Installing NodeJS + Yarn..."
+	@echo "Installing NodeJS + Yarn..."
 	@bash $(SCRIPTS_DIR)/02-install-nodejs.sh
 
 vscode:
-	@echo "📝 Installing Visual Studio Code..."
+	@echo "Installing Visual Studio Code..."
 	@bash $(SCRIPTS_DIR)/03-install-vscode.sh
 
 jetbrains:
-	@echo "🛠 Installing JetBrains Toolbox..."
+	@echo "Installing JetBrains Toolbox..."
 	@bash $(SCRIPTS_DIR)/04-install-jetbrainstools.sh
 
 docker:
-	@echo "🐳 Installing Docker CE..."
+	@echo "Installing Docker CE..."
 	@bash $(SCRIPTS_DIR)/05-install-docker.sh
 
 brave:
-	@echo "🌐 Installing Brave Browser..."
+	@echo "Installing Brave Browser..."
 	@bash $(SCRIPTS_DIR)/06-install-brave.sh
 
 ollama:
-	@echo "🧠 Installing Ollama..."
+	@echo "Installing Ollama..."
 	@bash $(SCRIPTS_DIR)/07-install-ollama.sh
 
 virtualization:
-	@echo "🖥 Installing Virtualization Tools (KVM, QEMU, virt-manager)..."
+	@echo "Installing Virtualization Tools (KVM, QEMU, virt-manager)..."
 	@bash $(SCRIPTS_DIR)/08-install-virtualization.sh
 
 neovim:
-	@echo "📝 Setting up Neovim IDE..."
+	@echo "Setting up Neovim IDE..."
 	@bash $(SCRIPTS_DIR)/09-install-neovim.sh
 
 # Backup Dotfiles (optional if you want)
-backup:
-	@echo "📦 Backing up dotfiles..."
-	@bash $(SCRIPTS_DIR)/99-backup-dotfiles.sh
+# backup:
+#	@echo "Backing up dotfiles..."
+#	@bash $(SCRIPTS_DIR)/99-backup-dotfiles.sh
 
 # Clean temporary files
 clean:
@@ -74,7 +74,7 @@ clean:
 # Show help
 help:
 	@echo ""
-	@echo "🛠️ Available Make targets:"
+	@echo " Available Make targets:"
 	@echo "  make install         -> Run full setup via orchestrator"
 	@echo "  make update          -> Only update system packages"
 	@echo "  make essentials      -> Install essential CLI tools manually"
@@ -90,6 +90,6 @@ help:
 	@echo "  make backup          -> Backup dotfiles"
 	@echo "  make clean           -> Clean temporary files"
 	@echo ""
-	@echo "Example: make install 🚀"
+	@echo "Example: make install "
 	@echo ""
 

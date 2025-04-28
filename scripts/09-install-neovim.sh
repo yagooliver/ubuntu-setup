@@ -1,5 +1,5 @@
 # === Setup Neovim Config ===
-echo "🔵 Setting up Neovim config..."
+echo "Setting up Neovim config..."
 #mkdir -p ~/.config/nvim
 #curl -fsSL https://raw.githubusercontent.com/yourusername/yourdotfilesrepo/main/init.lua -o ~/.config/nvim/init.lua
 # (optional - if you host your own nvim config on GitHub)
@@ -7,21 +7,21 @@ echo "🔵 Setting up Neovim config..."
 
 set -e
 
-echo "🚀 Starting Neovim Full Configuration Setup..."
+echo "Starting Neovim Full Configuration Setup..."
 
 # === Install lazy.nvim (Plugin Manager) ===
-echo "🔵 Installing lazy.nvim plugin manager..."
+echo "Installing lazy.nvim plugin manager..."
 git clone https://github.com/folke/lazy.nvim.git ~/.local/share/nvim/site/pack/lazy/start/lazy.nvim
 
 # === Create config folders ===
 mkdir -p ~/.config/nvim
 
 # === Create init.lua with full config ===
-echo "🔵 Creating Neovim init.lua config..."
+echo "Creating Neovim init.lua config..."
 
 cat << 'EOF' > ~/.config/nvim/init.lua
 -- =========================================
--- 🚀 Ultimate Neovim Setup for Dev (C#, ReactJS)
+-- Ultimate Neovim Setup for Dev (C#, ReactJS)
 -- =========================================
 
 -- Auto-install lazy.nvim if missing
@@ -110,15 +110,15 @@ require("lualine").setup({
 })
 EOF
 
-echo "✅ init.lua created at ~/.config/nvim/init.lua"
+echo "init.lua created at ~/.config/nvim/init.lua"
 
 # === Reminder to install LSP servers ===
 echo ""
-echo "🔵 Now install LSP servers globally (Node.js required):"
+echo "Now install LSP servers globally (Node.js required):"
 echo "npm install -g typescript typescript-language-server eslint vscode-langservers-extracted bash-language-server"
 echo "pip install pyright"
 echo "sudo apt install -y omnisharp-roslyn"
 echo ""
 
-echo "✅ Neovim Configuration Complete! 🎯"
-echo "⚡ Launch Neovim with 'nvim' and plugins will auto install!"
+echo "Neovim Configuration Complete!"
+echo "Launch Neovim with 'nvim' and plugins will auto install!"

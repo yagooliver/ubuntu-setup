@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "🔵 Installing Zsh + Oh-My-Zsh + Powerlevel10k + Nerd Font..."
+echo "Installing Zsh + Oh-My-Zsh + Powerlevel10k + Nerd Font..."
 
 # Install Zsh if missing
 if ! command -v zsh &> /dev/null; then
@@ -26,11 +26,11 @@ sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc || t
 
 # Install Nerd Fonts (FiraCode)
 if ! fc-list | grep -i "FiraCode Nerd Font" &> /dev/null; then
-    echo "🔵 Installing FiraCode Nerd Font for Zsh UI..."
+    echo "Installing FiraCode Nerd Font for Zsh UI..."
     sudo apt install -y fonts-firacode
 else
-    echo "✅ FiraCode Nerd Font already installed."
+    echo "FiraCode Nerd Font already installed."
 fi
 
-echo "✅ Zsh environment fully configured!"
+echo "Zsh environment fully configured!"
 

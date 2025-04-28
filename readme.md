@@ -50,8 +50,7 @@ make backup
 
 ```bash
 ubuntu-setup/scripts
-├──── 00-install-essentials.sh
-├──── 01-install-zsh.sh
+├──── 01-install-essentials.sh
 ├──── 02-install-nodejs.sh
 ├──── 03-install-vscode.sh
 ├──── 04-install-jetbrainstools.sh
@@ -60,6 +59,7 @@ ubuntu-setup/scripts
 ├──── 07-install-ollama.sh
 ├──── 08-install-virtualization.sh
 ├──── 09-install-neovim.sh
+├──── 10-install-zsh.sh
 ├── orchestrator.sh
 ├── Makefile
 └── README.md

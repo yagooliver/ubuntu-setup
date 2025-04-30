@@ -3,7 +3,7 @@
 # =====================================
 
 # Variables
-SCRIPTS_DIR := ./scripts/
+SCRIPTS_DIR := ./scripts
 
 # Default target
 all: install
@@ -11,7 +11,7 @@ all: install
 # Install everything
 install:
 	@echo "🚀 Running Full System Setup..."
-	@bash $(SCRIPTS_DIR)/orchestrator.sh
+	@bash ./orchestrator.sh
 
 # Update System only
 update:
@@ -26,7 +26,7 @@ essentials:
 # Install only individual components
 zsh:
 	@echo "💻 Installing Zsh + Oh-My-Zsh..."
-	@bash $(SCRIPTS_DIR)/01-install-zsh.sh
+	@bash $(SCRIPTS_DIR)/10-install-zsh.sh
 
 nodejs:
 	@echo "🟠 Installing NodeJS + Yarn..."
@@ -61,9 +61,9 @@ neovim:
 	@bash $(SCRIPTS_DIR)/09-install-neovim.sh
 
 # Backup Dotfiles (optional if you want)
-backup:
-	@echo "📦 Backing up dotfiles..."
-	@bash $(SCRIPTS_DIR)/99-backup-dotfiles.sh
+# backup:
+#	@echo "📦 Backing up dotfiles..."
+#	@bash $(SCRIPTS_DIR)/99-backup-dotfiles.sh
 
 # Clean temporary files
 clean:

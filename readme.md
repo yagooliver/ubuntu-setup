@@ -1,7 +1,7 @@
-# ✨ Ubuntu Developer Setup - Scripts
+# ✨ Linux Developer Setup - Scripts
 
-Welcome to my **Ubuntu Developer Automation Scripts**! 🚀  
-This repository automates the installation and configuration of a **professional developer environment** on **Ubuntu**, **WSL**, or **cloud servers**.
+Welcome to my **Linux Developer Automation Scripts**! 🚀  
+This repository automates the installation and configuration of a **professional developer environment** on **Linux**, **WSL**, or **cloud servers**.
 
 ---
 
@@ -27,6 +27,17 @@ Clone the repository:
 git clone https://github.com/yagooliver/ubuntu-setup.git ~/ubuntu-setup
 cd ~/ubuntu-setup
 ```
+
+```bash
+cd fedora
+```
+
+or 
+
+```bash
+cd ubuntu
+```
+
 
 Run the full setup:
 
